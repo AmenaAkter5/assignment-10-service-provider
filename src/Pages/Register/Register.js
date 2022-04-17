@@ -6,48 +6,59 @@ import logo from '../../images/Google.jpg';
 import './Register.css';
 
 const Register = () => {
+
+    // email, password, confirm password and custom error state
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
+    const [customError, setCustomError] = useState('');
 
     // page redirect handle after get user
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+    // create user hook
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
 
+
+
+    // set email on blur
     const handleEmailBlur = event => {
         setEmail(event.target.value);
     }
 
+    // set password on blur
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
     }
 
+    // set confirm password on blur
     const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value);
     }
 
-    if (user) {
-        navigate(from, { replace: true })
-    }
 
+    // register the new user
     const handleCreateUser = event => {
         event.preventDefault();
         if (password !== confirmPassword) {
-            setError('Your two passwords did not match')
+            setCustomError('Your two passwords did not match')
             return;
         }
         if (password.length < 6) {
-            setError('Password must be longer than 6 characters')
+            setCustomError('Password must be longer than 6 characters')
             return;
         }
-        setError('');
+        setCustomError('');
 
         // create user
         createUserWithEmailAndPassword(email, password)
+    }
+
+    // after get user redirect to the previous page
+    if (user) {
+        navigate(from, { replace: true })
     }
 
     return (
@@ -65,7 +76,9 @@ const Register = () => {
                         <div className='input-group'>
                             <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" placeholder='Confirm Your Password' required />
                         </div>
-                        <p className='error-message'>{error}</p>
+                        <p>{loading && 'Loading...'}</p>
+                        <p className='error-message'>{error && error?.message}</p>
+                        <p className='error-message'>{customError}</p>
                         <input className='form-submit' type="submit" value="Register" />
                     </form>
                     <p>

@@ -5,6 +5,8 @@ import './SignIn.css';
 import logo from '../../images/Google.jpg';
 import auth from './../../firebase.init';
 
+
+
 const SignIn = () => {
 
     // email and password state
@@ -17,28 +19,40 @@ const SignIn = () => {
     const from = location.state?.from?.pathname || '/';
 
 
+    // sign in user hook
     const [
         signInWithEmailAndPassword,
         user,
-        error
+        loading,
+        error,
     ] = useSignInWithEmailAndPassword(auth);
 
+
+
+    // set email on blur
     const handleEmailBlur = event => {
         setEmail(event.target.value);
     }
 
+    // set password on blur
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
     }
 
+
+    // sign in the registered user
+    const handleUserSignIn = event => {
+        event.preventDefault();
+
+        // sign in user
+        signInWithEmailAndPassword(email, password)
+    }
+
+    // after get user redirect to the previous page
     if (user) {
         navigate(from, { replace: true });
     }
 
-    const handleUserSignIn = event => {
-        event.preventDefault();
-        signInWithEmailAndPassword(email, password)
-    }
 
     return (
         <section className='sign-in'>
@@ -52,6 +66,7 @@ const SignIn = () => {
                         <div className='input-group'>
                             <input onBlur={handlePasswordBlur} type="password" name="password" id="" placeholder='Enter Password' required />
                         </div>
+                        <p>{loading && 'Loading...'}</p>
                         <p className='error-message'>{error && error?.message}</p>
                         <input className='form-submit' type="submit" value="Sign in" />
                     </form>
