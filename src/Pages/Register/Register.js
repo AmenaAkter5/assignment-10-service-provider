@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import logo from '../../images/Google.jpg';
@@ -21,6 +21,9 @@ const Register = () => {
     // create user hook
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
 
+
+    // sign in with google hook
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
 
 
     // set email on blur
@@ -61,9 +64,16 @@ const Register = () => {
         navigate(from, { replace: true })
     }
 
+
+    // handle google sign in button
+    const handleGooleSignIn = () => {
+        signInWithGoogle();
+    }
+
+
     return (
         <section>
-            <div className='form-container'>
+            <div className='form-container register'>
                 <div>
                     <h1 className='form-title my-4'>Register Please</h1>
                     <form onSubmit={handleCreateUser}>
@@ -87,7 +97,7 @@ const Register = () => {
                     <div className='divider-line'>
                         <span className="line"></span><p>or</p><span className="line"></span>
                     </div>
-                    <button className='google-sign'>
+                    <button onClick={handleGooleSignIn} className='google-sign'>
                         <img src={logo} alt="" />
                         <p>Continue with Google</p>
                     </button>

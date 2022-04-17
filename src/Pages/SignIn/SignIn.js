@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import './SignIn.css';
 import logo from '../../images/Google.jpg';
 import auth from './../../firebase.init';
@@ -28,6 +28,9 @@ const SignIn = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
+    // sign in with google hook
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+
 
     // set email on blur
     const handleEmailBlur = event => {
@@ -40,7 +43,7 @@ const SignIn = () => {
     }
 
 
-    // sign in the registered user
+    // sign in the registered user with email and password
     const handleUserSignIn = event => {
         event.preventDefault();
 
@@ -48,10 +51,18 @@ const SignIn = () => {
         signInWithEmailAndPassword(email, password)
     }
 
+
     // after get user redirect to the previous page
     if (user) {
         navigate(from, { replace: true });
     }
+
+
+    // handle google sign in button
+    const handleGooleSignIn = () => {
+        signInWithGoogle();
+    }
+
 
 
     return (
@@ -76,7 +87,7 @@ const SignIn = () => {
                     <div className='divider-line'>
                         <span className="line"></span><p>or</p><span className="line"></span>
                     </div>
-                    <button className='google-sign'>
+                    <button onClick={handleGooleSignIn} className='google-sign'>
                         <img src={logo} alt="" />
                         <p>Continue with Google</p>
                     </button>
