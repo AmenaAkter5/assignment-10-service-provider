@@ -29,7 +29,7 @@ const SignIn = () => {
 
 
     // sign in with google hook
-    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
 
 
     // set email on blur

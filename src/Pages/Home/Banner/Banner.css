@@ -8,7 +8,7 @@
 }
 
 .banner-heading {
-    color: #209cc9;
+    color: rgb(35, 166, 240);
     font-weight: bold;
 }
 
@@ -22,7 +22,7 @@
     padding: 5px 20px;
     font-size: 18px;
     color: white;
-    background-color: #51b1ff;
+    background-color: rgb(35, 166, 240);
     border-radius: 8px;
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import logo from '../../images/Google.jpg';
@@ -20,6 +20,9 @@ const Register = () => {
 
     // create user hook
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+
+    // send email verification hook
+    const [sendEmailVerification] = useSendEmailVerification(auth);
 
 
     // sign in with google hook
@@ -56,8 +59,12 @@ const Register = () => {
         setCustomError('');
 
         // create user
-        createUserWithEmailAndPassword(email, password)
+        createUserWithEmailAndPassword(email, password);
+
+        // send email verification
+        sendEmailVerification();
     }
+
 
     // after get user redirect to the previous page
     if (user) {
