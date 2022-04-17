@@ -21,16 +21,16 @@
 .sign-out {
     text-decoration: none;
     border: none;
-    color: white;
+    color: black;
     margin-left: 35px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #1C2B35;
+    background-color: white;
     cursor: pointer;
 }
 
 .sign-out:hover {
-    color: orange;
+    color: #0da1d6;
 }
 
 

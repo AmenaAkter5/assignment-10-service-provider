@@ -2,21 +2,21 @@
     {
         "id": 1,
         "name": "Physical Therapy",
-        "price": "300",
+        "price": "5000",
         "description": "It is one of the major service which I provide.Your personal physical therapy begins with a comprehensive evaluation of functional limitations and areas of pain.",
         "img": "https://i.ibb.co/8K4hsRt/physio-1.jpg"
     },
     {
         "id": 2,
         "name": "Chiropractic Therapy",
-        "price": "100",
+        "price": "2000",
         "description": "Chiropractic is a non-invasive, hands-on health care discipline that focuses on the neuro-musculoskeletal system. Chiropractors practice a manual approach.",
         "img": "https://i.ibb.co/kqJjKf9/physio-2.png"
     },
     {
         "id": 3,
         "name": "Massage Therapy",
-        "price": "150",
+        "price": "3000",
         "description": "Massage therapy is a hands-on treatment that involves manipulation of the soft tissue structures of the body to prevent and alleviate pain.",
         "img": "https://i.ibb.co/MN64r8n/physio-3.jpg"
     }
