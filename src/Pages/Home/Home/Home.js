@@ -1,16 +1,20 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
 import './Home.css';
 
 // #61b5e4
-// #a3daff
 // #52b2fe
 // #5ec2ed
+// #3abff0
 // #41c1ef
+// #a3daff
+// #ceebfb
+// #ddf0fa
 
 const Home = () => {
     return (
         <div>
-            <h1>Feel Better, move better, be better</h1>
+            <Banner></Banner>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 .header img {
-    height: 80px;
+    height: 70px;
 }
 
 .header .brand-logo {
@@ -10,7 +10,7 @@
     text-decoration: none;
     color: black;
     margin-left: 35px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
 }
 
@@ -39,6 +39,10 @@
 /* Mobile Device */
 
 @media screen and (max-width: 768px) {
+    .header img {
+        height: 60px;
+    }
+
     .header a {
         margin: 0;
     }
