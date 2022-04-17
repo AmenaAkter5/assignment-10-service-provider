@@ -35,8 +35,9 @@
 
 
 /* Media Query */
+/* =========== */
 
-/* Mobile Device */
+/* Mobile and Tablet Device */
 
 @media screen and (max-width: 768px) {
     .header img {

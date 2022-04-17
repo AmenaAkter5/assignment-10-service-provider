@@ -4,7 +4,7 @@ import banner from '../../../images/banner.jpg';
 
 const Banner = () => {
     return (
-        <div className='banner'>
+        <section className='banner'>
             <div className='banner-container container d-flex justify-content-between align-items-center'>
                 <div>
                     <h5 className='banner-heading mb-3'>HELPING YOU LIVE LIFE</h5>
@@ -15,7 +15,7 @@ const Banner = () => {
                     <img className='banner-img img-fluid' src={banner} alt="" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

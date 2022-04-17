@@ -19,11 +19,10 @@
 
 .banner-btn {
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 18px;
-    font-weight: bold;
     color: white;
-    background-color: #52b2ff;
+    background-color: #51b1ff;
     border-radius: 8px;
 }
 
@@ -51,7 +50,7 @@
     }
 
     .banner-btn {
-        margin: 5px 55px;
+        margin: 5px 72px;
     }
 
     .banner-img {
