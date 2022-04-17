@@ -1,13 +1,14 @@
 
 import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Home from './Pages/Home/Home';
 import Header from './Shared/Header/Header';
 import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About';
 import Register from './Pages/Register/Register';
 import SignIn from './Pages/SignIn/SignIn';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (

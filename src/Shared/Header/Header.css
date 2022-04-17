@@ -1,22 +1,21 @@
-.header {
+.header img {
     height: 80px;
-    background-color: #1C2B35;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 140px;
+}
+
+.header .brand-logo {
+    margin: 0;
 }
 
 .header a {
     text-decoration: none;
-    color: white;
+    color: black;
     margin-left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
 
 .header a:hover {
-    color: orange;
+    color: #0da1d6;
 }
 
 .sign-out {
@@ -37,16 +36,14 @@
 
 /* Media Query */
 
-@media screen and (max-width: 768px) {
-    .header {
-        display: flex;
-        justify-content: center;
-    }
+/* Mobile Device */
 
+@media screen and (max-width: 768px) {
     .header a {
-        display: none;
+        margin: 0;
     }
 }
+
 
 /* @media screen and (min-width: 481px) and (max-width: 768px) {
     .header a {
