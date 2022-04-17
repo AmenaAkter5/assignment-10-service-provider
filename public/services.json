@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
+        "name": "Physical Therapy",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "description": "It is one of the major service which I provide.Your personal physical therapy begins with a comprehensive evaluation of functional limitations and areas of pain.",
+        "img": "https://i.ibb.co/8K4hsRt/physio-1.jpg"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
+        "name": "Chiropractic Therapy",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "description": "Chiropractic is a non-invasive, hands-on health care discipline that focuses on the neuro-musculoskeletal system. Chiropractors practice a manual approach.",
+        "img": "https://i.ibb.co/kqJjKf9/physio-2.png"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
+        "name": "Massage Therapy",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "description": "Massage therapy is a hands-on treatment that involves manipulation of the soft tissue structures of the body to prevent and alleviate pain.",
+        "img": "https://i.ibb.co/MN64r8n/physio-3.jpg"
     }
 ]

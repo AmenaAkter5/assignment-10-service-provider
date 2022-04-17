@@ -9,10 +9,10 @@ const Service = ({ service }) => {
         <div>
             <div className='service'>
                 <img className='w-100' src={img} alt="" />
-                <h3>{name}</h3>
-                <p>Price: {price}</p>
-                <p><small>{description}</small></p>
-                <button className='service-btn'>Book Appointment</button>
+                <h3 className='mt-2'>{name}</h3>
+                <p>Price: <b>{price}</b></p>
+                <p className='service-description'>{description}</p>
+                <button className='service-btn mt-2'>Book Appointment</button>
             </div>
         </div>
     );
