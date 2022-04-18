@@ -6,12 +6,12 @@ import Header from './Shared/Header/Header';
 import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About';
 import SignIn from './Pages/SignIn/SignIn';
-import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import Home from './Pages/Home/Home/Home';
 import Footer from './Shared/Footer/Footer';
 import Checkout from './Pages/Checkout/Checkout';
 import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+// import PageNotFound from './Pages/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         }></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
+        {/* <Route path='*' element={<PageNotFound></PageNotFound>}></Route> */}
       </Routes>
       <Footer></Footer>
     </div>

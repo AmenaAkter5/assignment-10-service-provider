@@ -7,31 +7,6 @@ import auth from '../../firebase.init';
 import logo from '../../images/logo.PNG';
 import './Header.css';
 
-/* 
-{
-                    user ?
-                        <button className='sign-out' onClick={handleSignOut}>Sign Out</button>
-                        :
-                        <Link to="/login">Log in</Link>
-                }
-*/
-
-
-/* 
-<Link to='/'><img src={logo} alt="" /></Link>
-*/
-
-
-/* 
-<nav>
-                <Link to='/home'>Home</Link>
-                <Link to='/blogs'>Blogs</Link>
-                <Link to='/about'>About</Link>
-                <Link to='/register'>Register</Link>
-                <Link to='/signin'>Sign In</Link>
-            </nav>
-*/
-
 const Header = () => {
 
     const [user] = useAuthState(auth);

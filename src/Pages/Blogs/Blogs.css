@@ -1,0 +1,18 @@
+.blog-title {
+    color: rgb(35, 166, 240);
+    text-align: left;
+}
+
+.blogs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.article {
+    text-align: justify;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 2px 2px 5px #BABECC, 2px 2px 5px #BABECC;
+}
