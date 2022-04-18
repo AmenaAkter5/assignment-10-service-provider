@@ -8,6 +8,7 @@ const Service = ({ service }) => {
 
     const navigate = useNavigate();
 
+    // redirect to checkout page by click on card button
     const handleServiceBtn = () => {
         navigate('/checkout');
     }

@@ -1,5 +1,4 @@
 .banner {
-    /* background-color: #abddf8; */
     background-color: #e3e7ea;
 }
 
@@ -57,14 +56,3 @@
         margin: 20px 0;
     }
 }
-
-
-/* @media screen and (min-width: 481px) and (max-width: 768px) {
-    .header a {
-        display: none;
-    }
-    .header {
-        display: flex;
-        justify-content: center;
-    }
-} */

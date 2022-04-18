@@ -7,6 +7,7 @@ const Banner = () => {
 
     const navigate = useNavigate();
 
+    // banner page button handler
     const aboutMebuttonHandle = () => {
         navigate('/about');
     }
