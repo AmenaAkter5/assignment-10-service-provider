@@ -12,18 +12,15 @@ import SocialLogin from './../SocialLogin/SocialLogin';
 
 const SignIn = () => {
 
-    // email and password state
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+    // get email and password state
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
 
     // page redirect handle after get user
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-
-    let errorElement;
 
 
     // sign in user hook
@@ -34,40 +31,24 @@ const SignIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    // password reset email sent hook
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    // loading page
     if (loading || sending) {
         return <Loading></Loading>
     }
+
+
+    // error handle
+    let errorElement;
 
     if (error) {
         errorElement = <p className='text-danger'><b>Error: {error?.message}</b></p>
     }
 
 
-    // sign in with google hook
-    // const [signInWithGoogle] = useSignInWithGoogle(auth);
-
-
-    // set email on blur
-    /* const handleEmailBlur = event => {
-        setEmail(event.target.value);
-    } */
-
-    // set password on blur
-    /* const handlePasswordBlur = event => {
-        setPassword(event.target.value);
-    } */
-
-
     // sign in the registered user with email and password
-    /* const handleUserSignIn = event => {
-        event.preventDefault();
-
-        // sign in user
-        signInWithEmailAndPassword(email, password)
-    } */
-
     const handleUserSignIn = event => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -77,16 +58,12 @@ const SignIn = () => {
         signInWithEmailAndPassword(email, password);
     }
 
-
-    // after get user redirect to the previous page
-    if (user) {
-        navigate(from, { replace: true });
-    }
-
+    // navigate to Register page
     const navigateRegister = event => {
         navigate('/register');
     }
 
+    // reset password email sent confirmed by using toast
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
@@ -98,12 +75,10 @@ const SignIn = () => {
         }
     }
 
-
-    // handle google sign in button
-    /* const handleGooleSignIn = () => {
-        signInWithGoogle();
-    } */
-
+    // after get user redirect to the previous page
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
 
     return (
@@ -129,10 +104,6 @@ const SignIn = () => {
                     <div className='divider-line'>
                         <span className="line"></span><p>or</p><span className="line"></span>
                     </div>
-                    {/* <button className='google-sign'>
-                        <img src={logo} alt="" />
-                        <p>Continue with Google</p>
-                    </button> */}
                     <SocialLogin></SocialLogin>
                     <ToastContainer />
                 </div>
