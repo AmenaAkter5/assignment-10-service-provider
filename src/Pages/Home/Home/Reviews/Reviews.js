@@ -16,7 +16,7 @@ const Reviews = () => {
 
     return (
         <div className="container mx-auto my-5">
-            <h2 className="my-5 text-center">What My Users Say!</h2>
+            <h2 className="service-title text-center mb-5 pt-2">What My Clients Say!</h2>
             <div className="users-container">
                 {
                     users.map(user => <Users

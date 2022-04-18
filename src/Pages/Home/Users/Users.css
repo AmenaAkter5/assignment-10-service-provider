@@ -1,6 +1,6 @@
 .user-reviews {
     width: 330px;
-    height: 450px;
+    height: 350px;
     box-shadow: 2px 2px 5px #BABECC, 2px 2px 5px #BABECC;
     box-sizing: border-box;
     border-radius: 8px;
@@ -9,8 +9,4 @@
 
 .user-reviews img {
     border-radius: 50%;
-}
-
-.ratings {
-    color: #fb17d0;
 }
