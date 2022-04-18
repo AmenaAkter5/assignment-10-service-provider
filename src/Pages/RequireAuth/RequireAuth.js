@@ -2,15 +2,21 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from './../../Shared/Loading/Loading';
 
 
 const RequireAuth = ({ children }) => {
 
     // get user 
-    const [user] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
 
     // get location
     const location = useLocation();
+
+    // redirect to loading spinner
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     // redirect to sign in page if user is not logged in
     if (!user) {

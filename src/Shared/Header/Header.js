@@ -54,7 +54,7 @@ const Header = () => {
                             <Link to='/checkout'>Checkout</Link>
                             {
                                 user ?
-                                    <button className='sign-out' onClick={handleSignOut}>Sign Out</button>
+                                    <button className='sign-out ps-0' onClick={handleSignOut}>Sign Out</button>
                                     :
                                     <Link to="/signin">Sign in</Link>
                             }
