@@ -11,7 +11,9 @@ import Footer from './Shared/Footer/Footer';
 import Checkout from './Pages/Checkout/Checkout';
 import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
-// import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import NotFound from './Shared/NotFound/NotFound';
+
+
 
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
         }></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        {/* <Route path='*' element={<PageNotFound></PageNotFound>}></Route> */}
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
