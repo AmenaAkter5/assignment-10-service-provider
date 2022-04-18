@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import logo from '../../images/Google.jpg';
 import './Register.css';
 import Loading from './../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';

@@ -1,0 +1,21 @@
+.about-page {
+    background-color: #ebf5fc;
+    padding: 50px;
+}
+
+.page-title {
+    color: rgb(35, 166, 240);
+}
+
+.about-me {
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    text-align: justify;
+    height: 300px;
+    width: 800px;
+    box-shadow: 2px 2px 5px #BABECC, 2px 2px 5px #BABECC;
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 400;
+}
