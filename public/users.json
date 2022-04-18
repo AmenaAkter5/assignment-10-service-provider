@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Abrar Fahad",
+        "ratings": "5 stars",
+        "img": "https://randomuser.me/api/portraits/men/65.jpg",
+        "review": "Wonderful way to learn the fundamentals. The terminal could use a fix - twice now the program was left running(in background) and the file I had open was just completely blanked when I went back. Lost a few hours of work to this."
+    },
+    {
+        "id": 2,
+        "name": "Dipto Ehsan",
+        "ratings": "5 stars",
+        "img": "https://randomuser.me/api/portraits/men/77.jpg",
+        "review": "You can complete courses; quizzes, challenge other 'players', write and publish your own code, get help by asking questions and so much more. I'll say it straightforward: this is the BEST app to learn computer languages."
+    },
+    {
+        "id": 3,
+        "name": "Jennifer Lewis",
+        "ratings": "5 stars",
+        "img": "https://randomuser.me/api/portraits/women/52.jpg",
+        "review": "Great app for learning. It's written for children, but I think it's great for adults too. The premium cost is reasonable. I appreciate the support and forums available within the app."
+    }
+]
