@@ -48,14 +48,3 @@
         margin: 0;
     }
 }
-
-
-/* @media screen and (min-width: 481px) and (max-width: 768px) {
-    .header a {
-        display: none;
-    }
-    .header {
-        display: flex;
-        justify-content: center;
-    }
-} */
